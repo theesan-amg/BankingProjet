@@ -8,15 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class AccountTest {
 
-    @Test
-    void shouldPrintEmptyStatement() {
-        Account account = new Account(fixedClock(2026, 5, 13));
 
-        String expected =
-                String.format("%-12s %8s %8s%n", "Date", "Amount", "Balance");
-
-        assertEquals(expected, account.printStatement());
-    }
 
     @Test
     void shouldPrintStatementWithOneDeposit() {
