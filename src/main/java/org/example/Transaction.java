@@ -1,4 +1,7 @@
 package org.example;
 
-public class Transaction {
+import java.time.LocalDate;
+
+public record Transaction(LocalDate date, int amount) {
 }
+

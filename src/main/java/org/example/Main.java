@@ -1,7 +1,14 @@
 package org.example;
 
+import java.time.Clock;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Account account = new Account(Clock.systemDefaultZone());
+
+        account.deposit(700);
+        account.withdraw(400);
+
+        System.out.println(account.printStatement());
     }
 }
